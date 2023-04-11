@@ -1,9 +1,7 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all",
-  "cursorOffset": 0,
-  "editorconfig": true,
-  "endOfLine": "lf",
-  "tabWidth": 2,
-  "useTabs": true
+	"singleQuote": true,
+	"trailingComma": "all",
+	"endOfLine": "auto",
+	"arrowParens": "avoid",
+	"tabWidth": 2
 }
