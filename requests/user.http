@@ -7,3 +7,7 @@ Content-Type: application/json
 	"email": "email@email.com",
 	"password": ""
 }
+
+
+### Find one user
+GET http://localhost:3000/user/1
