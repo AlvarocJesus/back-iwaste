@@ -15,8 +15,8 @@ export class UserController {
 	@Put('/:id')
 	async updateUser(@Param('id') id: number, @Body() user: User) {
 		return await this.userService.updateUser(id, user);
-  }
-  
+	}
+
 	@Get('/:id')
 	async getOneUser(@Param('id') id: number): Promise<User> {
 		return await this.userService.getOneUser(id);

@@ -13,7 +13,7 @@ export class UserService {
 
 	async updateUser(id: number, user: User) {
 		return this.userRepository.updateUser(id, user);
-  }
+	}
 
 	async getOneUser(id: number): Promise<User> {
 		return this.userRepository.findOneUser(id);
