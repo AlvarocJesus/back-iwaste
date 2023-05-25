@@ -11,6 +11,10 @@ export class UserRepository {
 		private usersRepository: Repository<User>,
 	) {}
 
+	async getUsers() {
+		return this.usersRepository.find();
+	}
+
 	async saveUser(user: CreateUserDTO): Promise<CreateUserDTO & User> {
 		return this.usersRepository.save(user);
 	}
