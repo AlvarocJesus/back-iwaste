@@ -11,6 +11,10 @@ export class UserService {
 		return this.userRepository.saveUser(user);
 	}
 
+	async updateUser(id: number, user: User) {
+		return this.userRepository.updateUser(id, user);
+  }
+
 	async getOneUser(id: number): Promise<User> {
 		return this.userRepository.findOneUser(id);
 	}

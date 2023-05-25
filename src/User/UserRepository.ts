@@ -18,4 +18,8 @@ export class UserRepository {
 	async findOneUser(id: number): Promise<User> {
 		return this.usersRepository.findOne({ where: { id } });
 	}
+
+	async updateUser(id: number, user: User) {
+		return this.usersRepository.update(id, user);
+	}
 }
