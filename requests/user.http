@@ -7,3 +7,15 @@ Content-Type: application/json
 	"email": "email@email.com",
 	"password": ""
 }
+
+### Update user
+PUT http://localhost:3000/user/1
+Content-Type: application/json
+
+{
+	"email": "email2@email.com"
+}
+
+### Find one user
+GET http://localhost:3000/user/1
+
