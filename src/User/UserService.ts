@@ -7,6 +7,10 @@ import { UserRepository } from './UserRepository';
 export class UserService {
 	constructor(private readonly userRepository: UserRepository) {}
 
+	async listUsers() {
+		return this.userRepository.getUsers();
+	}
+
 	async createUser(user: CreateUserDTO): Promise<CreateUserDTO> {
 		return this.userRepository.saveUser(user);
 	}
