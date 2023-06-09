@@ -1,0 +1,8 @@
+### Save employee
+POST http://localhost:3000/employee
+Content-Type: application/json
+
+{
+	"name": "Teste",
+	"address": "Rua teste, 123 - Testezao"
+}
