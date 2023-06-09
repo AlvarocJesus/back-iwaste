@@ -3,6 +3,6 @@ POST http://localhost:3000/employee
 Content-Type: application/json
 
 {
-	"name": "Teste",
-	"address": "Rua teste, 123 - Testezao"
+	"name": "Teste2",
+	"address": "Rua teste2, 123 - Testezinho"
 }
