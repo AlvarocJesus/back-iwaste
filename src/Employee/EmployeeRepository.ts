@@ -14,7 +14,6 @@ export class EmployeeRepository {
 	}
 
 	async saveEmployee(employee: EmployeeCreateDto): Promise<Employee> {
-		console.log({ employee });
 		return await this.employeeRepository.save(employee);
 	}
 }
