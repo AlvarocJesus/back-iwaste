@@ -1,2 +1,12 @@
-### List products
+### List employee
 GET http://localhost:3000/employee
+
+
+### Update employee
+PUT  http://localhost:3000/employee/1
+Content-Type: application/json
+
+{
+	"name": "Teste 5",
+	"address": "Rua alguma coisa, 0987 - ALguma outra coisa"
+}
