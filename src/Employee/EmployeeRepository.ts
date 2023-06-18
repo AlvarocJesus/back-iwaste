@@ -13,6 +13,6 @@ export default class ProductRepository {
 	}
 
 	async getEmployee(id: number): Promise<Employee> {
-		return this.employeeRepository.findOne({ where: { id } });
+		return await this.employeeRepository.findOne({ where: { id } });
 	}
 }
