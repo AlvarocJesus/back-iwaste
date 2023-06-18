@@ -11,4 +11,8 @@ export default class ProductRepository {
 	async getAllEmployees() {
 		return this.employeeRepository.find();
 	}
+
+	async getEmployee(id: number): Promise<Employee> {
+		return this.employeeRepository.findOne({ where: { id } });
+	}
 }

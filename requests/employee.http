@@ -1,2 +1,5 @@
 ### List products
 GET http://localhost:3000/employee
+
+### Find employee by id
+GET http://localhost:3000/employee/1
