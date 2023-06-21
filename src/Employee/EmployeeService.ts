@@ -8,4 +8,8 @@ export class EmployeeService {
 	async listEmployees() {
 		return this.productRepository.getAllEmployees();
 	}
+
+	async removeEmployee(id: number) {
+		return await this.productRepository.deleteEmployee(id);
+	}
 }

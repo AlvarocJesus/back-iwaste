@@ -11,4 +11,8 @@ export default class ProductRepository {
 	async getAllEmployees() {
 		return this.employeeRepository.find();
 	}
+
+	async deleteEmployee(id: number) {
+		return await this.employeeRepository.delete(id);
+	}
 }
