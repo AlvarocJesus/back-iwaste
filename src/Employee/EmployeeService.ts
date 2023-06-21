@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import ProductRepository from './EmployeeRepository';
 
 @Injectable()
@@ -10,6 +10,12 @@ export class EmployeeService {
 	}
 
 	async removeEmployee(id: number): Promise<void> {
+		const employeeNoExists = await this.productRepository.getOne(id);
+
+		if (!employeeNoExists) {
+			throw new NotFoundException('Employee not found');
+		}
+
 		await this.productRepository.deleteEmployee(id);
 	}
 }

@@ -12,6 +12,10 @@ export default class ProductRepository {
 		return this.employeeRepository.find();
 	}
 
+	async getOne(id: number) {
+		return this.employeeRepository.findOne({ where: { id } });
+	}
+
 	async deleteEmployee(id: number): Promise<void> {
 		await this.employeeRepository.delete(id);
 	}
