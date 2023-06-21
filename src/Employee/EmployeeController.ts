@@ -14,7 +14,6 @@ export class ProductsController {
 
 	@Post()
 	async createEmployee(@Body() employee: EmployeeCreateDto): Promise<Employee> {
-		console.log({ employee });
 		return await this.employeeService.createEmployee(employee);
 	}
 }

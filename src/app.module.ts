@@ -4,14 +4,8 @@ import { User } from './User/User';
 import { UserModule } from './User/UserModule';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-<<<<<<< HEAD
 import { Employee } from './Employee/Employee';
 import { EmployeeModule } from './Employee/EmployeeModule';
-=======
-import { ProductsController } from './Employee/EmployeeController';
-import { ProductsModule } from './Employee/EmployeeModule';
-import { Employee } from './Employee/Employee';
->>>>>>> 44ba3b6072d3273ecdd4096d0b4c0694673a164f
 
 @Module({
 	imports: [
@@ -23,11 +17,7 @@ import { Employee } from './Employee/Employee';
 			logging: true,
 		}),
 		UserModule,
-<<<<<<< HEAD
 		EmployeeModule,
-=======
-		ProductsModule,
->>>>>>> 44ba3b6072d3273ecdd4096d0b4c0694673a164f
 	],
 	controllers: [AppController],
 	providers: [AppService],
