@@ -1,5 +1,7 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { EmployeeService } from './EmployeeService';
+import { Employee } from './Employee';
+import { EmployeeCreateDto } from './EmployeeCreateDTO';
 
 @Controller('employee')
 export class ProductsController {
@@ -8,5 +10,10 @@ export class ProductsController {
 	@Get()
 	async listProducts() {
 		return await this.employeeService.listEmployees();
+	}
+
+	@Post()
+	async createEmployee(@Body() employee: EmployeeCreateDto): Promise<Employee> {
+		return await this.employeeService.createEmployee(employee);
 	}
 }
