@@ -9,7 +9,7 @@ export class EmployeeService {
 		return this.productRepository.getAllEmployees();
 	}
 
-	async removeEmployee(id: number) {
-		return await this.productRepository.deleteEmployee(id);
+	async removeEmployee(id: number): Promise<void> {
+		await this.productRepository.deleteEmployee(id);
 	}
 }

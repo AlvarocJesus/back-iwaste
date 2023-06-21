@@ -11,7 +11,7 @@ export class ProductsController {
 	}
 
 	@Delete('/:id')
-	async removeEmployee(@Param('id') id: number) {
+	async removeEmployee(@Param('id') id: number): Promise<void> {
 		return await this.employeeService.removeEmployee(id);
 	}
 }

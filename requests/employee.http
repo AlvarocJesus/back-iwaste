@@ -3,4 +3,4 @@ GET http://localhost:3000/employee
 
 
 ### Delete employee
-DELETE http://localhost:3000/employee/1
+DELETE http://localhost:3000/employee/2
