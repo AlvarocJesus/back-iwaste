@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { EmployeeRepository } from './EmployeeRepository';
 import { CreateEmployeeDto } from './CreateEmployeeDTO';
+import { Employee } from './Employee';
+import { EmployeeRepository } from './EmployeeRepository';
+import { EmployeeCreateDto } from './EmployeeCreateDTO';
 
 @Injectable()
 export class EmployeeService {
@@ -12,5 +14,9 @@ export class EmployeeService {
 
 	async updateEmployee(newEmployee: CreateEmployeeDto, id: number) {
 		return this.employeeRepository.updateEmployee(newEmployee, id);
+	}
+
+	async createEmployee(employee: EmployeeCreateDto): Promise<Employee> {
+		return await this.employeeRepository.saveEmployee(employee);
 	}
 }

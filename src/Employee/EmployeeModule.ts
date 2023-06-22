@@ -10,4 +10,4 @@ import { EmployeeRepository } from './EmployeeRepository';
 	controllers: [ProductsController],
 	providers: [EmployeeService, EmployeeRepository],
 })
-export class ProductsModule {}
+export class EmployeeModule {}

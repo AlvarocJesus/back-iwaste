@@ -4,9 +4,8 @@ import { User } from './User/User';
 import { UserModule } from './User/UserModule';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProductsController } from './Employee/EmployeeController';
-import { ProductsModule } from './Employee/EmployeeModule';
 import { Employee } from './Employee/Employee';
+import { EmployeeModule } from './Employee/EmployeeModule';
 
 @Module({
 	imports: [
@@ -18,7 +17,7 @@ import { Employee } from './Employee/Employee';
 			logging: true,
 		}),
 		UserModule,
-		ProductsModule,
+		EmployeeModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],
