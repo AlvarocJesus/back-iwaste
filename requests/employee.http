@@ -1,2 +1,29 @@
+### Save employee
+POST http://localhost:3000/employee
+Content-Type: application/json
+
+{
+	"name": "Teste2",
+	"address": "Rua teste2, 123 - Testezinho"
+}
+
 ### List products
 GET http://localhost:3000/employee
+
+### Find employee exists by id
+GET http://localhost:3000/employee/1
+
+### Find employee not exists by id
+GET http://localhost:3000/employee/5
+
+### Delete employee
+DELETE http://localhost:3000/employee/3
+
+### Update employee
+PUT  http://localhost:3000/employee/1
+Content-Type: application/json
+
+{
+	"name": "Teste 5",
+	"address": "Rua alguma coisa, 0987 - ALguma outra coisa"
+}

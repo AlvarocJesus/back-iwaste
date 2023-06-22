@@ -9,8 +9,5 @@ export class Employee {
 	name: string;
 
 	@Column()
-	quantity: number;
-
-	@Column()
-	price: number;
+	address: string;
 }

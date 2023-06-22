@@ -3,11 +3,11 @@ import { ProductsController } from './EmployeeController';
 import { EmployeeService } from './EmployeeService';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Employee } from './Employee';
-import ProductRepository from './EmployeeRepository';
+import { EmployeeRepository } from './EmployeeRepository';
 
 @Module({
 	imports: [TypeOrmModule.forFeature([Employee])],
 	controllers: [ProductsController],
-	providers: [EmployeeService, ProductRepository],
+	providers: [EmployeeService, EmployeeRepository],
 })
-export class ProductsModule {}
+export class EmployeeModule {}
