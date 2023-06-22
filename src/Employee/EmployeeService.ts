@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { CreateEmployeeDto } from './CreateEmployeeDTO';
 import { Employee } from './Employee';
 import { EmployeeRepository } from './EmployeeRepository';
 import { EmployeeCreateDto } from './EmployeeCreateDTO';
@@ -8,7 +9,11 @@ export class EmployeeService {
 	constructor(private readonly employeeRepository: EmployeeRepository) {}
 
 	async listEmployees() {
-		return await this.employeeRepository.getAllEmployees();
+		return this.employeeRepository.getAllEmployees();
+	}
+
+	async updateEmployee(newEmployee: CreateEmployeeDto, id: number) {
+		return this.employeeRepository.updateEmployee(newEmployee, id);
 	}
 
 	async createEmployee(employee: EmployeeCreateDto): Promise<Employee> {

@@ -1,19 +1,24 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Employee } from './Employee';
 import { Repository } from 'typeorm';
+import { CreateEmployeeDto } from './CreateEmployeeDTO';
 import { EmployeeCreateDto } from './EmployeeCreateDTO';
 
 export class EmployeeRepository {
 	constructor(
 		@InjectRepository(Employee)
-		private employeeRepository: Repository<Employee>,
+		private repository: Repository<Employee>,
 	) {}
 
 	async getAllEmployees() {
-		return await this.employeeRepository.find();
+		return this.repository.find();
+	}
+
+	async updateEmployee(newEmployee: CreateEmployeeDto, id: number) {
+		return this.repository.update(id, newEmployee);
 	}
 
 	async saveEmployee(employee: EmployeeCreateDto): Promise<Employee> {
-		return await this.employeeRepository.save(employee);
+		return await this.repository.save(employee);
 	}
 }
