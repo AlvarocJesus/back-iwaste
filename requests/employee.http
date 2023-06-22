@@ -10,6 +10,11 @@ Content-Type: application/json
 ### List products
 GET http://localhost:3000/employee
 
+### Find employee exists by id
+GET http://localhost:3000/employee/1
+
+### Find employee not exists by id
+GET http://localhost:3000/employee/5
 
 ### Delete employee
 DELETE http://localhost:3000/employee/3

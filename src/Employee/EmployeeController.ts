@@ -21,6 +21,11 @@ export class ProductsController {
 		return await this.employeeService.listEmployees();
 	}
 
+	@Get('/:id')
+	async getProductById(@Param('id') id: number): Promise<Employee> {
+		return await this.employeeService.getProductById(id);
+	}
+
 	@Delete('/:id')
 	async removeEmployee(@Param('id') id: number): Promise<void> {
 		return await this.employeeService.removeEmployee(id);

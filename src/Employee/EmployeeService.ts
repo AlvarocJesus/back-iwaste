@@ -29,4 +29,14 @@ export class EmployeeService {
 
 		await this.employeeRepository.deleteEmployee(id);
 	}
+
+	async getProductById(id: number): Promise<Employee> {
+		const employee = await this.employeeRepository.getEmployee(id);
+
+		if (!employee) {
+			throw new NotFoundException('Employee not exists');
+		}
+
+		return employee;
+	}
 }

@@ -29,4 +29,8 @@ export class EmployeeRepository {
 	async deleteEmployee(id: number): Promise<void> {
 		await this.repository.delete(id);
 	}
+
+	async getEmployee(id: number): Promise<Employee> {
+		return await this.repository.findOne({ where: { id } });
+	}
 }
