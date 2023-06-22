@@ -23,10 +23,10 @@ export class EmployeeRepository {
 	}
 
 	async getOne(id: number) {
-		return this.employeeRepository.findOne({ where: { id } });
+		return this.repository.findOne({ where: { id } });
 	}
 
 	async deleteEmployee(id: number): Promise<void> {
-		await this.employeeRepository.delete(id);
+		await this.repository.delete(id);
 	}
 }
