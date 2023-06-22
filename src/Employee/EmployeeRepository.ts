@@ -31,6 +31,6 @@ export class EmployeeRepository {
 	}
 
 	async getEmployee(id: number): Promise<Employee> {
-		return await this.employeeRepository.findOne({ where: { id } });
+		return await this.repository.findOne({ where: { id } });
 	}
 }
