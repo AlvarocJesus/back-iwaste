@@ -11,6 +11,9 @@ Content-Type: application/json
 GET http://localhost:3000/employee
 
 
+### Delete employee
+DELETE http://localhost:3000/employee/3
+
 ### Update employee
 PUT  http://localhost:3000/employee/1
 Content-Type: application/json

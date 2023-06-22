@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateEmployeeDto } from './CreateEmployeeDTO';
 import { Employee } from './Employee';
 import { EmployeeRepository } from './EmployeeRepository';
@@ -18,5 +18,15 @@ export class EmployeeService {
 
 	async createEmployee(employee: EmployeeCreateDto): Promise<Employee> {
 		return await this.employeeRepository.saveEmployee(employee);
+	}
+
+	async removeEmployee(id: number): Promise<void> {
+		const employeeNoExists = await this.employeeRepository.getOne(id);
+
+		if (!employeeNoExists) {
+			throw new NotFoundException('Employee not found');
+		}
+
+		await this.employeeRepository.deleteEmployee(id);
 	}
 }
