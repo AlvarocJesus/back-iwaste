@@ -8,7 +8,7 @@ export class ProductsRepository {
 		private productsRepository: Repository<Products>,
 	) {}
 
-	async findProducts() {
-		return await this.productsRepository.find();
+	async findOneProduct(id: number) {
+		return await this.productsRepository.findOne({ where: { id } });
 	}
 }
