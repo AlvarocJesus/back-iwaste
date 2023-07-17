@@ -5,9 +5,9 @@ import { ProductsRepository } from './ProductsRepository';
 export class ProductsService {
 	constructor(private readonly productsRepository: ProductsRepository) {}
 
-	async getAllProducts() {
-		return await this.productsRepository.findProducts();
-	}
+	// async getAllProducts() {
+	// 	return await this.productsRepository.findProducts();
+	// }
 
 	async getOneProduct(id: number) {
 		const product = await this.productsRepository.findOneProduct(id);
