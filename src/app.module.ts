@@ -6,25 +6,23 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Employee } from './Employee/Employee';
 import { EmployeeModule } from './Employee/EmployeeModule';
-import { ProductsModule } from './products/products.module';
-import { ProductsControllerController } from './products-controller/products-controller.controller';
-import { ControllerModule } from './service/controller/controller.module';
+import { ProductsModule } from './products/ProductsModule';
+import { Products } from './products/Products';
 
 @Module({
 	imports: [
 		TypeOrmModule.forRoot({
 			type: 'sqlite',
 			database: 'db.sqlite',
-			entities: [User, Employee],
+			entities: [User, Employee, Products],
 			synchronize: true,
 			logging: true,
 		}),
 		UserModule,
 		EmployeeModule,
 		ProductsModule,
-		ControllerModule,
 	],
-	controllers: [AppController, ProductsControllerController],
+	controllers: [AppController],
 	providers: [AppService],
 })
 export class AppModule {}
