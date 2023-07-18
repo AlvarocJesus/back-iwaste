@@ -6,8 +6,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Employee } from './Employee/Employee';
 import { EmployeeModule } from './Employee/EmployeeModule';
-import { Products } from './products/Products';
-import { ProductsModule } from './products/ProductsModule';
+import { Products } from './Products/Products';
+import { ProductsModule } from './Products/ProductsModule';
 
 @Module({
 	imports: [
