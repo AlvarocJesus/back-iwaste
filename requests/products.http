@@ -3,3 +3,13 @@ GET http://localhost:3000/products/1
 
 ### Find all products
 GET http://localhost:3000/products
+
+### Save product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+	"name": "Produto 1",
+	"quantity": 5,
+	"value": 15.5,
+}
