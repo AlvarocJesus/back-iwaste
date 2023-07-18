@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+	BadRequestException,
+	Injectable,
+	NotFoundException,
+} from '@nestjs/common';
 import { ProductsRepository } from './ProductsRepository';
 import { Products } from './Products';
 import { CreateProductDTO } from './CreateProductsDTO';
@@ -25,7 +29,7 @@ export class ProductsService {
 		const productSaved = await this.productsRepository.saveProducts(product);
 
 		if (!productSaved) {
-			throw new NotFoundException('Product not found');
+			throw new BadRequestException('Failed to save product');
 		}
 
 		return productSaved;
