@@ -8,11 +8,15 @@ export class ProductsRepository {
 		private productsRepository: Repository<Products>,
 	) {}
 
-	async findProducts() {
+	async findProducts(): Promise<Products[]> {
 		return await this.productsRepository.find();
 	}
 
-	async findOneProduct(id: number) {
+	async findOneProduct(id: number): Promise<Products> {
 		return await this.productsRepository.findOne({ where: { id } });
+	}
+
+	async saveProducts(product: Products): Promise<Products> {
+		return await this.productsRepository.save(product);
 	}
 }
