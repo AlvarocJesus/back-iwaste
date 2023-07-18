@@ -1,6 +1,7 @@
 import { Repository } from 'typeorm';
 import { Products } from './Products';
 import { InjectRepository } from '@nestjs/typeorm';
+import { CreateProductDTO } from './CreateProductsDTO';
 
 export class ProductsRepository {
 	constructor(
@@ -16,7 +17,7 @@ export class ProductsRepository {
 		return await this.productsRepository.findOne({ where: { id } });
 	}
 
-	async saveProducts(product: Products): Promise<Products> {
+	async saveProducts(product: CreateProductDTO): Promise<Products> {
 		return await this.productsRepository.save(product);
 	}
 }
