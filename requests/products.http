@@ -3,3 +3,14 @@ GET http://localhost:3000/products/1
 
 ### Find all products
 GET http://localhost:3000/products
+
+
+### Update product by id
+PUT http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+	"name": "Novo nome",
+	"quantity": 5,
+	"value": 20
+}
