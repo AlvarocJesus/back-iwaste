@@ -1,6 +1,6 @@
 import { Controller, Get, Param, Put, Body } from '@nestjs/common';
 import { ProductsService } from './ProductsService';
-import { Products } from './Products';
+import { ProductDTO } from './ProductDTO';
 
 @Controller('products')
 export class ProductsController {
@@ -18,9 +18,9 @@ export class ProductsController {
 
 	@Put('/:id')
 	async updateProduct(
-		/* @Param('id') id: number, */ @Body() product: Products,
-	) {
-		console.log({ product });
-		return await this.productsService.updateProduct(product);
+		@Param('id') id: number,
+		@Body() product: ProductDTO,
+	): Promise<void> {
+		return await this.productsService.updateProduct(id, product);
 	}
 }

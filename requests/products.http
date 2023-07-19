@@ -14,3 +14,12 @@ Content-Type: application/json
 	"quantity": 5,
 	"value": 5
 }
+
+### Update part product by id
+PUT http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+	"quantity": 5,
+	"value": 5
+}
