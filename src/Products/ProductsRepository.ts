@@ -15,4 +15,8 @@ export class ProductsRepository {
 	async findOneProduct(id: number) {
 		return await this.productsRepository.findOne({ where: { id } });
 	}
+
+	async updateProduct(id: number, product: Products) {
+		return await this.productsRepository.update(id, product);
+	}
 }
