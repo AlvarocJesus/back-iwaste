@@ -6,7 +6,7 @@ GET http://localhost:3000/products
 
 
 ### Update product by id
-PUT http://localhost:3000/products/1
+PUT http://localhost:3000/products/2
 Content-Type: application/json
 
 {

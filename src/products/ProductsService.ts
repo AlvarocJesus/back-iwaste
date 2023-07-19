@@ -1,6 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { ProductsRepository } from './ProductsRepository';
-import { Products } from './Products';
 import { ProductDTO } from './ProductDTO';
 
 @Injectable()
@@ -22,6 +21,8 @@ export class ProductsService {
 	}
 
 	async updateProduct(id: number, product: ProductDTO): Promise<void> {
+		await this.getOneProduct(id);
+
 		await this.productsRepository.updateProduct(id, product);
 	}
 }
