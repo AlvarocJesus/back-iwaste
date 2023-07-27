@@ -3,3 +3,6 @@ GET http://localhost:3000/products/1
 
 ### Find all products
 GET http://localhost:3000/products
+
+### Remove product by id
+DELETE http://localhost:3000/products/1
