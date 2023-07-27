@@ -6,3 +6,32 @@ GET http://localhost:3000/products
 
 ### Remove product by id
 DELETE http://localhost:3000/products/1
+
+### Update product by id
+PUT http://localhost:3000/products/2
+Content-Type: application/json
+
+{
+	"name": "Novo nome",
+	"quantity": 5,
+	"value": 5
+}
+
+### Update part product by id
+PUT http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+	"quantity": 5,
+	"value": 5
+}
+
+### Save product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+	"name": "Produto 1",
+	"quantity": 5,
+	"value": 15.5
+}
