@@ -11,6 +11,6 @@ export class Products {
 	@Column()
 	quantity: number;
 
-	@Column()
+	@Column({ type: 'decimal', default: 0.0, precision: 2 })
 	value: number;
 }
