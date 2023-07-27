@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './User/User';
-import { UserModule } from './User/UserModule';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { Employee } from './Employee/Employee';
+import { Products } from './Products/Products';
+import { UserModule } from './User/UserModule';
 import { EmployeeModule } from './Employee/EmployeeModule';
 import { ProductsModule } from './Products/ProductsModule';
-import { Products } from './Products/Products';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
 	imports: [
