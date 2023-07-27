@@ -18,4 +18,8 @@ export class ProductsService {
 
 		return product;
 	}
+
+	async removeProduct(id: number): Promise<any> {
+		return await this.productsRepository.deleteProduct(id);
+	}
 }
