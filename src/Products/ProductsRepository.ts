@@ -1,5 +1,6 @@
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import { ProductDTO } from './ProductDTO';
 import { CreateProductDTO } from './CreateProductsDTO';
 import { Products } from './Products';
 
@@ -15,6 +16,10 @@ export class ProductsRepository {
 
 	async findOneProduct(id: number): Promise<Products> {
 		return await this.productsRepository.findOne({ where: { id } });
+	}
+
+	async updateProduct(id: number, product: ProductDTO): Promise<void> {
+		await this.productsRepository.update(id, product);
 	}
 
 	async saveProducts(product: CreateProductDTO): Promise<Products> {
