@@ -34,10 +34,4 @@ export class ProductsService {
 
 		return productSaved;
 	}
-
-	async removeProduct(id: number): Promise<void> {
-		await this.getOneProduct(id);
-
-		return await this.productsRepository.deleteProduct(id);
-	}
 }
