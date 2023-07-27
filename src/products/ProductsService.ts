@@ -19,7 +19,9 @@ export class ProductsService {
 		return product;
 	}
 
-	async removeProduct(id: number): Promise<any> {
+	async removeProduct(id: number): Promise<void> {
+		await this.getOneProduct(id);
+
 		return await this.productsRepository.deleteProduct(id);
 	}
 }
