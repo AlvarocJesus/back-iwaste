@@ -12,7 +12,9 @@ describe('UserController', () => {
 		controller = module.get<UserController>(UserController);
 	});
 
-	it('should be defined', () => {
-		expect(controller).toBeDefined();
+	describe('GET /user/:id', () => {
+		it('should return detail user when user by id 1 exists', () => {
+			expect(controller.getOneUser(1)).toEqual('Hello World!');
+		});
 	});
 });
